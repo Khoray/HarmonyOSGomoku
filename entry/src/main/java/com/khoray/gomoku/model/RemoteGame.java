@@ -57,7 +57,7 @@ public class RemoteGame implements Runnable {
     @Override
     public void run() {
         try {
-            socket = new Socket("81.69.249.148", 8888);
+            socket = new Socket("120.46.178.129", 8888);
             InputStream is = socket.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
             sendMsg("join " + roomID);
