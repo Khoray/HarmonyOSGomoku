@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <DirectionalLayout
+        ohos:id="$+id:ai_board_layout"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:orientation="vertical"
+        ohos:alignment="center">
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:alignment="center">
+        <Text
+
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:text="你的棋子："
+            ohos:text_size="30vp"
+            />
+        <Text
+            ohos:id="$+id:ai_now_go"
+            ohos:height="40vp"
+            ohos:width="40vp"
+            ohos:text_size="30vp"
+            />
+
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:alignment="center">
+        <Button
+            ohos:id="$+id:ai_game_btn"
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:text="开始游戏"
+            ohos:text_size="30vp"
+            />
+        <Button
+            ohos:id="$+id:ai_undo"
+            ohos:height="match_content"
+            ohos:start_margin="20vp"
+            ohos:width="match_content"
+            ohos:text="悔棋"
+            ohos:text_size="30vp"
+            />
+        <Button
+            ohos:id="$+id:ai_ret_btn"
+            ohos:start_margin="20vp"
+            ohos:height="40vp"
+            ohos:width="match_content"
+            ohos:text="返回"
+            ohos:text_size="30vp"
+            />
+
+    </DirectionalLayout>
+
+</DirectionalLayout>

@@ -1,0 +1,52 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "singlegameability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "singlegameability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_SingleGameAbility",
+      "value": "entry_SingleGameAbility"
+    },
+    {
+      "name": "aigameability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "aigameability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_AIGameAbility",
+      "value": "entry_AIGameAbility"
+    },
+    {
+      "name": "remotegameability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "remotegameability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_RemoteGameAbility",
+      "value": "entry_RemoteGameAbility"
+    }
+  ]
+}

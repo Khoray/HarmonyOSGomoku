@@ -1,0 +1,89 @@
+{
+  "app": {
+    "bundleName": "com.khoray.gomoku",
+    "vendor": "example",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+  },
+  "module": {
+    "package": "com.khoray.gomoku",
+    "name": ".MyApplication",
+    "mainAbility": "com.khoray.gomoku.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": "com.khoray.gomoku.MainAbility",
+        "description": "$string:mainability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_MainAbility",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "visible": true,
+        "type": "page"
+      },
+      {
+        "name": "com.khoray.gomoku.SingleGameAbility",
+        "description": "$string:singlegameability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_SingleGameAbility",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "visible": true,
+        "type": "page"
+      },
+      {
+        "name": "com.khoray.gomoku.AIGameAbility",
+        "description": "$string:aigameability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_AIGameAbility",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "visible": true,
+        "type": "page"
+      },
+      {
+        "name": "com.khoray.gomoku.RemoteGameAbility",
+        "description": "$string:remotegameability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_RemoteGameAbility",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "visible": true,
+        "type": "page"
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "rec",
+        "usedScene":
+        {
+          "ability": ["com.mycamera.Ability", "com.mycamera.AbilityBackground"],
+          "when": "always"
+        }
+      }
+    ]
+  }
+}

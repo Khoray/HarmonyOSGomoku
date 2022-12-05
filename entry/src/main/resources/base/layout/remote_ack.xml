@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:alignment="horizontal_center"
+    ohos:background_element="#fff"
+    ohos:top_margin="10fp"
+    ohos:bottom_margin="10fp"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_color="#FFCD71FF"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="请输入房间号："
+        ohos:text_size="25fp"/>
+
+
+    <DirectionalLayout
+        ohos:height="match_parent"
+        ohos:width="match_content"
+        ohos:orientation="horizontal"
+        ohos:top_margin="18vp"
+        ohos:alignment="horizontal_center">
+
+        <TextField
+            ohos:id="$+id:room_id_text"
+            ohos:height="match_content"
+            ohos:width="100vp"
+            ohos:text_size="18fp"
+            ohos:text_color="#FFCD71FF"
+            ohos:background_element="$graphic:bg_textfield"
+            ohos:hint=""/>
+
+
+
+
+    </DirectionalLayout>
+
+
+
+
+    <DirectionalLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        ohos:top_margin="18vp"
+        ohos:alignment="horizontal_center">
+
+        <Button
+            ohos:id="$+id:join_room"
+            ohos:text="进入房间"
+            ohos:text_size="20fp"
+            ohos:height="match_content"
+            ohos:width="95fp"
+            >
+        </Button>
+
+
+    </DirectionalLayout>
+
+
+
+
+
+</DirectionalLayout>
