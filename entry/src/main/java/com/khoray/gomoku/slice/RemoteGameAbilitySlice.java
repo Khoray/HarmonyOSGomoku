@@ -122,6 +122,7 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
                 getUITaskDispatcher().asyncDispatch(new Runnable() {
                     @Override
                     public void run() {
+                        roomIDText.setText(roomID);
                         nowGo.setText("未准备");
                         if(playerNum == 0) {
                             toast("房间满员了");
@@ -278,7 +279,7 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
             RemoteGameAbilitySlice.this.terminate();
         });
         roomIDText = findComponentById(ResourceTable.Id_room_id_text);
-        roomIDText.setText(roomID);
+        roomIDText.setText("正在连接中...");
         DirectionalLayout layout = findComponentById(ResourceTable.Id_remote_board_layout);
         layout.removeAllComponents();
         chessBoardView = new ChessBoardView(layout, getContext(), cpc -> {

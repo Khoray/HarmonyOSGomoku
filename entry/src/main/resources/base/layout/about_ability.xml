@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:background_element="$media:bg"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:text_helloworld"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="游戏介绍"
+        ohos:text_size="40vp"
+        />
+
+    <Text
+        ohos:start_margin="5vp"
+        ohos:end_margin="5vp"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:multiple_lines="true"
+        ohos:text="    五子棋起源于中国，是全国智力运动会竞技项目之一，是一种两人对弈的纯策略型棋类游戏。双方分别使用黑白两色的棋子，下在棋盘直线与横线的交叉点上，先形成五子连珠者获胜。"
+        ohos:text_size="20vp"
+        />
+
+    <Text
+        ohos:top_margin="20vp"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="关于"
+        ohos:text_size="40vp"
+        />
+
+    <Text
+        ohos:start_margin="5vp"
+        ohos:end_margin="5vp"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:multiple_lines="true"
+        ohos:text="游戏版本：移动应用软件开发期末项目"
+        ohos:text_size="20vp"
+        ohos:text_alignment="center"
+        />
+    <Text
+        ohos:start_margin="5vp"
+        ohos:end_margin="5vp"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:multiple_lines="true"
+        ohos:text="作者：黄锐20204112(Khoray)"
+        ohos:text_size="20vp"
+        ohos:text_alignment="center"
+        />
+
+
+</DirectionalLayout>

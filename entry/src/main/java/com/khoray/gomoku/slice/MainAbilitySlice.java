@@ -15,7 +15,7 @@ import ohos.agp.window.dialog.CommonDialog;
 import static ohos.agp.components.ComponentContainer.LayoutConfig.MATCH_CONTENT;
 
 public class MainAbilitySlice extends AbilitySlice {
-    Button singleGameBtn, AIGameBtn, remoteGameBtn;
+    Button singleGameBtn, AIGameBtn, remoteGameBtn, aboutBtn;
 
     @Override
     public void onStart(Intent intent) {
@@ -55,6 +55,9 @@ public class MainAbilitySlice extends AbilitySlice {
             cd.setSize(600, MATCH_CONTENT);
             cd.show();
 
+        });
+        aboutBtn.setClickedListener(c -> {
+            present(new AIGameAbilitySlice(), new Intent());
         });
 
     }

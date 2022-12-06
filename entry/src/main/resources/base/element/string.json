@@ -47,6 +47,18 @@
     {
       "name": "entry_RemoteGameAbility",
       "value": "entry_RemoteGameAbility"
+    },
+    {
+      "name": "aboutability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "aboutability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_AboutAbility",
+      "value": "entry_AboutAbility"
     }
   ]
 }

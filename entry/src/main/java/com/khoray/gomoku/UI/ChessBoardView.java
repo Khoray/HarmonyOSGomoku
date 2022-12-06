@@ -26,9 +26,9 @@ public class ChessBoardView {
         boardLayout.setWidth(MATCH_CONTENT);
         boardLayout.setHeight(MATCH_CONTENT);
         boardLayout.setOrientation(Component.VERTICAL);
-        ShapeElement se = new ShapeElement();
-        se.setRgbColor(RgbColor.fromArgbInt(Color.getIntColor("#FE952C")));
-        boardLayout.setBackground(se);
+//        ShapeElement se = new ShapeElement();
+//        se.setRgbColor(RgbColor.fromArgbInt(Color.getIntColor("#FE952C")));
+//        boardLayout.setBackground(se);
         chesses = new ChessPieceComponent[maxRow][maxCol];
 
         for(int i = 0; i < maxRow; i++) {
@@ -45,12 +45,12 @@ public class ChessBoardView {
                 chesses[i][j].posX = i;
                 chesses[i][j].posY = j;
                 ShapeElement ce = new ShapeElement();
-                ce.setRgbColor(RgbColor.fromArgbInt(Color.getIntColor("#FFFFFF")));
+                ce.setRgbColor(RgbColor.fromArgbInt(Color.getIntColor("#FE952C")));
                 chesses[i][j].setBackground(ce);
                 chesses[i][j].setHeight(chessWidth - 1);
                 chesses[i][j].setWidth(chessWidth - 1);
-                chesses[i][j].setMarginsLeftAndRight(chessMargin, chessMargin);
-                chesses[i][j].setMarginsTopAndBottom(chessMargin, chessMargin);
+//                chesses[i][j].setMarginsLeftAndRight(chessMargin, chessMargin);
+//                chesses[i][j].setMarginsTopAndBottom(chessMargin, chessMargin);
                 row.addComponent(chesses[i][j]);
             }
             boardLayout.addComponent(row);

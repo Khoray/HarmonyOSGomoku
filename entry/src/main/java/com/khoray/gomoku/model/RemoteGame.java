@@ -21,7 +21,7 @@ public class RemoteGame implements Runnable {
     Socket socket;
     EventHandler handler;
     String roomID;
-    boolean quiting;
+    boolean quiting = false;
     boolean inRoom = false;
 
     public RemoteGame(EventHandler handler, String roomID) {
@@ -39,7 +39,7 @@ public class RemoteGame implements Runnable {
                     bw.flush();
                 } catch(Exception e) {
                     e.printStackTrace();
-                    handler.handleDisconnected();
+                    if(!quiting) handler.handleDisconnected();
                     return;
                 }
             }
@@ -58,6 +58,7 @@ public class RemoteGame implements Runnable {
     public void run() {
         try {
             socket = new Socket("120.46.178.129", 8888);
+            System.err.println("建立链接成功");
             InputStream is = socket.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
             sendMsg("join " + roomID);
@@ -143,7 +144,7 @@ public class RemoteGame implements Runnable {
         quiting = true;
         sendLeave();
         try {
-            socket.close();
+            if(socket != null) socket.close();
             socket = null;
         } catch (IOException e) {
             e.printStackTrace();

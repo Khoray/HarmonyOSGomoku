@@ -4,43 +4,55 @@
     ohos:height="match_parent"
     ohos:width="match_parent"
     ohos:alignment="center"
+    ohos:background_element="$media:bg"
     ohos:orientation="vertical">
 
-    <Text
-        ohos:id="$+id:text_helloworld"
-        ohos:height="match_content"
-        ohos:width="match_content"
-        ohos:background_element="$graphic:background_ability_main"
+    <Image
+        ohos:height="70vp"
+        ohos:width="230vp"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="五子棋"
-        ohos:text_size="40vp"
-        />
-    <com.khoray.gomoku.UI.ChessPieceComponent
-        ohos:id="$+id:chess_comp"
-        ohos:height="50vp"
-        ohos:width="50vp"
-        ohos:background_element="$media:icon"
+        ohos:background_element="$media:title"
+        ohos:scale_mode="stretch"
         />
     <Button
         ohos:id="$+id:single_game_btn"
         ohos:height="match_content"
-        ohos:width="match_content"
+        ohos:width="200vp"
+        ohos:padding="5vp"
+        ohos:top_margin="20vp"
+        ohos:background_element="$graphic:bg_btn"
         ohos:text="单人游戏"
         ohos:text_size="40vp"
         />
     <Button
         ohos:id="$+id:ai_game_btn"
         ohos:height="match_content"
-        ohos:width="match_content"
+        ohos:width="200vp"
+        ohos:padding="5vp"
+        ohos:background_element="$graphic:bg_btn"
         ohos:text="AI游戏"
+        ohos:top_margin="15vp"
         ohos:text_size="40vp"
         />
     <Button
         ohos:id="$+id:remote_game_btn"
         ohos:height="match_content"
-        ohos:width="match_content"
+        ohos:width="200vp"
+        ohos:padding="5vp"
+        ohos:top_margin="15vp"
+        ohos:background_element="$graphic:bg_btn"
         ohos:text_size="40vp"
         ohos:text="联机对战"
+        />
+    <Button
+        ohos:id="$+id:about_btn"
+        ohos:height="match_content"
+        ohos:width="200vp"
+        ohos:padding="5vp"
+        ohos:top_margin="15vp"
+        ohos:background_element="$graphic:bg_btn"
+        ohos:text_size="40vp"
+        ohos:text="关于"
         />
 
 </DirectionalLayout>

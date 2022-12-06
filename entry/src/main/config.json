@@ -72,15 +72,27 @@
         "orientation": "unspecified",
         "visible": true,
         "type": "page"
+      },
+      {
+        "name": "com.khoray.gomoku.AboutAbility",
+        "description": "$string:aboutability_description",
+        "icon": "$media:icon",
+        "label": "$string:entry_AboutAbility",
+        "launchType": "standard",
+        "orientation": "unspecified",
+        "visible": true,
+        "type": "page"
       }
     ],
     "reqPermissions": [
       {
         "name": "ohos.permission.INTERNET",
         "reason": "rec",
-        "usedScene":
-        {
-          "ability": ["com.mycamera.Ability", "com.mycamera.AbilityBackground"],
+        "usedScene": {
+          "ability": [
+            "com.mycamera.Ability",
+            "com.mycamera.AbilityBackground"
+          ],
           "when": "always"
         }
       }
