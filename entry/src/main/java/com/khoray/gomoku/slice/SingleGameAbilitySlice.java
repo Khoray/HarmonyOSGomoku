@@ -24,13 +24,13 @@ public class SingleGameAbilitySlice extends AbilitySlice {
         initGame();
     }
     private void initGame() {
-        nowGo.setText("");
+        nowGo.setText("游戏未开始");
         game = null;
         chessBoardView.clear();
     }
     private void startGame() {
-        nowGo.setText("X");
         game = new Game();
+        updateMover();
         chessBoardView.clear();
     }
 
@@ -41,9 +41,13 @@ public class SingleGameAbilitySlice extends AbilitySlice {
             if(lastMove != null) {
                 game.undo();
                 chessBoardView.clearMove(lastMove);
-                nowGo.setText("" + game.piece[game.queryMover()]);
+                updateMover();
             }
         }
+    }
+
+    private void updateMover() {
+        nowGo.setText(game.queryMover() == 1 ? "黑棋⚫" : "白棋⚪");
     }
 
     private void initComponent() {
@@ -77,10 +81,11 @@ public class SingleGameAbilitySlice extends AbilitySlice {
                 int x = cpc.posX, y = cpc.posY;
                 if(game != null && game.makeMove(x, y)) {
                     chessBoardView.makeMove(game.getLastMove());
-                    nowGo.setText("" + game.piece[game.queryMover()]);
                     // now mover here
+                    updateMover();
                     if(game.checkEnd() != 0) {
-                        new MyDialog(getContext(), "游戏结束", (game.checkEnd() == 1 ? "X" : "O") + " win!", "结束", "继续", new MyDialog.ClickedListener() {
+
+                        new MyDialog(getContext(), "游戏结束", (game.checkEnd() == 1 ? "黑棋" : "白棋") + "胜利!", "结束", "继续", new MyDialog.ClickedListener() {
                             @Override
                             public void click(MyDialog myDialog) {
                                 myDialog.destroy();

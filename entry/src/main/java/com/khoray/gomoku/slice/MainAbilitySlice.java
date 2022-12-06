@@ -56,6 +56,7 @@ public class MainAbilitySlice extends AbilitySlice {
             cd.show();
 
         });
+        aboutBtn = findComponentById(ResourceTable.Id_about_btn);
         aboutBtn.setClickedListener(c -> {
             present(new AIGameAbilitySlice(), new Intent());
         });

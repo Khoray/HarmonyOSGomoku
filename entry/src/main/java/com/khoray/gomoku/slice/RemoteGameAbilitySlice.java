@@ -57,6 +57,8 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
                         game.makeMove(move.x, move.y);
                         chessBoardView.makeMove(move);
                         remoteStatus.setText("该你了");
+                        undoBtn.setTextColor(Color.BLACK);
+                        undoBtn.setEnabled(true);
                         reportEnd();
                     }
                 });
@@ -83,6 +85,8 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
                     public void run() {
                         opponentNowGo.setText("未加入");
                         nowGo.setText("未准备");
+                        startBtn.setEnabled(true);
+                        startBtn.setTextColor(Color.BLACK);
                         undoBtn.setTextColor(Color.GRAY);
                         undoBtn.setEnabled(false);
                     }
@@ -107,8 +111,8 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
                 getUITaskDispatcher().asyncDispatch(new Runnable() {
                     @Override
                     public void run() {
-                        nowGo.setText("" + Game.piece[playerType]);
-                        opponentNowGo.setText("" + Game.piece[3 - playerType]);
+                        nowGo.setText(playerType == 1 ? "黑棋⚫" : "白棋⚪");
+                        opponentNowGo.setText(playerType == 2 ? "黑棋⚫" : "白棋⚪");
                         game = new Game();
                         chessBoardView.clear();
                         undoBtn.setTextColor(Color.BLACK);
@@ -124,6 +128,8 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
                     public void run() {
                         roomIDText.setText(roomID);
                         nowGo.setText("未准备");
+                        startBtn.setEnabled(true);
+                        startBtn.setTextColor(Color.BLACK);
                         if(playerNum == 0) {
                             toast("房间满员了");
                             RemoteGameAbilitySlice.this.terminate();
@@ -193,6 +199,7 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
         (new Thread(remoteGame)).start();
     }
 
+
     @Override
     protected void onStop() {
         if(remoteGame != null) remoteGame.close();
@@ -203,8 +210,10 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
         game = null;
         chessBoardView.clear();
         nowGo.setText("未准备");
-        opponentNowGo.setText("未准备");
-        remoteStatus.setText("游戏尚未开始");
+        startBtn.setEnabled(true);
+        startBtn.setTextColor(Color.BLACK);
+        opponentNowGo.setText("未加入");
+        remoteStatus.setText("游戏未开始");
     }
 
     private void prepare() {
@@ -226,7 +235,6 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
             if(lastMove != null) {
                 game.undo();
                 chessBoardView.clearMove(lastMove);
-                nowGo.setText("" + game.piece[game.queryMover()]);
             }
         }
     }
@@ -270,6 +278,8 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
             @Override
             public void onClick(Component component) {
                 prepare();
+                startBtn.setEnabled(false);
+                startBtn.setTextColor(Color.GRAY);
                 nowGo.setText("已准备");
             }
         });
@@ -289,6 +299,8 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
                     chessBoardView.makeMove(game.getLastMove());
                     remoteGame.sendMove(game.getLastMove());
                     remoteStatus.setText("对方的回合");
+                    undoBtn.setTextColor(Color.GRAY);
+                    undoBtn.setEnabled(false);
                     reportEnd();
 
                 }

@@ -99,6 +99,9 @@ public class ChessPieceComponent extends Component implements Component.DrawTask
         if(posX != 14) canvas.drawLine(width / 2f, height / 2f, width / 2f, height, linePainter);
         if(posY != 0) canvas.drawLine(0f, height / 2f, width / 2f, height / 2f, linePainter);
         if(posY != 14) canvas.drawLine(width / 2f, height / 2f, width, height / 2f, linePainter);
+//        if(posX == 7 && posY == 7) canvas.drawCircle(width / 2f, height / 2f, 3, chessFillPainter);
+        chessFillPainter.setColor(Color.BLACK);
+        if((posX == 3 || posX == 11) && (posY == 3 || posY == 11) || posX == 7 && posY == 7) canvas.drawCircle(width / 2f, height / 2f, 10, chessFillPainter);
 
 
         if(type == 2) {

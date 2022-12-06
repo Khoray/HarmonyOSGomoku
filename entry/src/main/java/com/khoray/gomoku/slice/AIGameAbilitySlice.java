@@ -36,7 +36,11 @@ public class AIGameAbilitySlice extends AbilitySlice {
         gameAI = null;
         chessBoardView.clear();
         playerType = 0;
-        nowGo.setText("");
+        nowGo.setText("游戏未开始");
+    }
+
+    private void updateMover() {
+        nowGo.setText(game.queryMover() == 1 ? "黑棋⚫" : "白棋⚪");
     }
 
     private void startGame() {
@@ -48,6 +52,7 @@ public class AIGameAbilitySlice extends AbilitySlice {
             public void click(MyDialog myDialog) {
                 playerType = 1;
                 nowGo.setText("" + Game.piece[playerType]);
+                updateMover();
                 myDialog.destroy();
             }
         }, new MyDialog.ClickedListener() {
@@ -55,9 +60,10 @@ public class AIGameAbilitySlice extends AbilitySlice {
             public void click(MyDialog myDialog) {
                 playerType = 2;
                 nowGo.setText("" + Game.piece[playerType]);
-                chessBoardView.makeMove(new Game.Move(8, 8, game.queryMover()));
-                game.makeMove(8, 8);
+                chessBoardView.makeMove(new Game.Move(7, 7, game.queryMover()));
+                game.makeMove(7, 7);
                 gameAI.updateValue(game.boardToAIArray());
+                updateMover();
                 myDialog.destroy();
             }
         }, null);
@@ -66,7 +72,7 @@ public class AIGameAbilitySlice extends AbilitySlice {
 
     private boolean reportEnd() {
         if(game.checkEnd() != 0) {
-            new MyDialog(getContext(), "游戏结束", (game.checkEnd() == playerType ? "玩家" : "AI") + " win!", "结束", "继续", new MyDialog.ClickedListener() {
+            new MyDialog(getContext(), "游戏结束", (game.checkEnd() == playerType ? "玩家" : "AI") + "胜利!", "结束", "继续", new MyDialog.ClickedListener() {
                 @Override
                 public void click(MyDialog myDialog) {
                     myDialog.destroy();
@@ -90,7 +96,6 @@ public class AIGameAbilitySlice extends AbilitySlice {
             if(lastMove != null) {
                 game.undo();
                 chessBoardView.clearMove(lastMove);
-                nowGo.setText("" + game.piece[game.queryMover()]);
             }
         }
     }

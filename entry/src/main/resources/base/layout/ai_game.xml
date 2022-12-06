@@ -25,13 +25,14 @@
             ohos:height="40vp"
             ohos:width="match_content"
             ohos:text="你的棋子："
-            ohos:text_size="30vp"
+            ohos:text_size="20vp"
             />
         <Text
             ohos:id="$+id:ai_now_go"
             ohos:height="40vp"
-            ohos:width="40vp"
-            ohos:text_size="30vp"
+            ohos:width="match_content"
+            ohos:text="游戏未开始"
+            ohos:text_size="20vp"
             />
 
     </DirectionalLayout>
@@ -43,26 +44,32 @@
         ohos:alignment="center">
         <Button
             ohos:id="$+id:ai_game_btn"
-            ohos:height="40vp"
-            ohos:width="match_content"
-            ohos:text="开始游戏"
-            ohos:text_size="30vp"
+            ohos:height="match_content"
+            ohos:width="100vp"
+            ohos:background_element="$graphic:bg_btn"
+            ohos:padding="5vp"
+            ohos:text="新游戏"
+            ohos:text_size="20vp"
             />
         <Button
             ohos:id="$+id:ai_undo"
             ohos:height="match_content"
+            ohos:width="100vp"
+            ohos:background_element="$graphic:bg_btn"
+            ohos:padding="5vp"
             ohos:start_margin="20vp"
-            ohos:width="match_content"
             ohos:text="悔棋"
-            ohos:text_size="30vp"
+            ohos:text_size="20vp"
             />
         <Button
             ohos:id="$+id:ai_ret_btn"
             ohos:start_margin="20vp"
-            ohos:height="40vp"
-            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:background_element="$graphic:bg_btn"
+            ohos:width="100vp"
+            ohos:padding="5vp"
             ohos:text="返回"
-            ohos:text_size="30vp"
+            ohos:text_size="20vp"
             />
 
     </DirectionalLayout>
