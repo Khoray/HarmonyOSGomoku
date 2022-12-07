@@ -17,8 +17,7 @@
         />
 
     <Text
-        ohos:start_margin="5vp"
-        ohos:end_margin="5vp"
+        ohos:padding="10vp"
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:multiple_lines="true"
@@ -36,8 +35,8 @@
         />
 
     <Text
-        ohos:start_margin="5vp"
-        ohos:end_margin="5vp"
+
+        ohos:padding="10vp"
         ohos:height="match_content"
         ohos:width="match_parent"
         ohos:multiple_lines="true"

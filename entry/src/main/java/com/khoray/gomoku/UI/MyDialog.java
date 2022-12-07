@@ -36,7 +36,7 @@ public class MyDialog {
             }
         });
         btn2.setText(btn2Str);
-        cd.setSize(600, MATCH_CONTENT);
+        cd.setSize(MATCH_CONTENT, MATCH_CONTENT);
         cd.setContentCustomComponent(dl);
         cd.setDestroyedListener(destroyedListener);
         cd.show();

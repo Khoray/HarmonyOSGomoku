@@ -50,15 +50,17 @@ public class MainAbilitySlice extends AbilitySlice {
                 present(new RemoteGameAbilitySlice(), intent);
                 cd.destroy();
             });
+            Button cancel = dl.findComponentById(ResourceTable.Id_cancel);
+            cancel.setClickedListener(c -> { cd.destroy(); });
 
             cd.setContentCustomComponent(dl);
-            cd.setSize(600, MATCH_CONTENT);
+            cd.setSize(MATCH_CONTENT, MATCH_CONTENT);
             cd.show();
 
         });
         aboutBtn = findComponentById(ResourceTable.Id_about_btn);
         aboutBtn.setClickedListener(c -> {
-            present(new AIGameAbilitySlice(), new Intent());
+            present(new AboutAbilitySlice(), new Intent());
         });
 
     }

@@ -253,7 +253,13 @@ public class RemoteGameAbilitySlice extends AbilitySlice {
                     myDialog.destroy();
                 }
             }, null);
+            remoteStatus.setText("游戏未开始");
+            startBtn.setEnabled(true);
+            startBtn.setTextColor(Color.BLACK);
+            undoBtn.setTextColor(Color.GRAY);
+            undoBtn.setEnabled(false);
             game = null;
+
             return true;
         }
         return false;

@@ -85,9 +85,10 @@ public class SingleGameAbilitySlice extends AbilitySlice {
                     updateMover();
                     if(game.checkEnd() != 0) {
 
-                        new MyDialog(getContext(), "游戏结束", (game.checkEnd() == 1 ? "黑棋" : "白棋") + "胜利!", "结束", "继续", new MyDialog.ClickedListener() {
+                        new MyDialog(getContext(), "游戏结束", (game.checkEnd() == 1 ? "黑棋" : "白棋") + "胜利!", "新游戏", "取消", new MyDialog.ClickedListener() {
                             @Override
                             public void click(MyDialog myDialog) {
+                                startGame();
                                 myDialog.destroy();
                             }
                         }, new MyDialog.ClickedListener() {

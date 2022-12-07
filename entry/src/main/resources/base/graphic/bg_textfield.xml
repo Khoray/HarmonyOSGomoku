@@ -19,5 +19,5 @@
         ohos:radius="10"/>
     <stroke
         ohos:width="1vp"
-        ohos:color="#FF5693CD"/>
+        ohos:color="$color:brown"/>
 </shape>

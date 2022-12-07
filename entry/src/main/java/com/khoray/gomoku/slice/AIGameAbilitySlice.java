@@ -47,7 +47,7 @@ public class AIGameAbilitySlice extends AbilitySlice {
         game = new Game();
         chessBoardView.clear();
         gameAI = new GameAI(15, 15);
-        new MyDialog(getContext(), "选择你的棋子", "先手X 或者 后手O", "先手X", "后手O", new MyDialog.ClickedListener() {
+        new MyDialog(getContext(), "选择你的棋子", "先手⚫或者后手⚪", "先手⚫", "后手⚪", new MyDialog.ClickedListener() {
             @Override
             public void click(MyDialog myDialog) {
                 playerType = 1;
